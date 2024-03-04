@@ -1,0 +1,129 @@
+.main-welcome-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../images/woman_on_bike.webp");
+  background-position: bottom;
+  background-size: cover;
+}
+
+.main-welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  color: white;
+}
+
+@media (min-width: 0px) and (max-width: 1920px) {
+  .main-welcome-image {
+    height: calc(300px + (500 - 300) * (100vw - 480px) / (1920 - 480));
+  }
+
+  .main-welcome-text-upper {
+    font-size: calc(32px + (48 - 32) * (100vw - 480px) / (1920 - 480));
+  }
+
+  .main-welcome-text-lower {
+    font-size: calc(12px + (16 - 12) * (100vw - 480px) / (1920 - 480));
+  }
+
+  .divider {
+    margin: calc(6px + (16 - 6) * (100vw - 480px) / (1920 - 480)) 0;
+  }
+
+  .main-pros-text-upper {
+    font-size: calc(24px + (48 - 24) * (100vw - 480px) / (1920 - 480));
+  }
+
+  .main-pros-text-lower {
+    font-size: calc(11px + (16 - 11) * (100vw - 480px) / (1920 - 480));
+  }
+
+  .main-pros-cards-card-text-upper {
+    font-size: calc(16px + (20 - 16) * (100vw - 480px) / (1920 - 480));
+  }
+
+  .main-pros-cards-card-text-lower {
+    font-size: calc(11px + (14 - 11) * (100vw - 480px) / (1920 - 480));
+  }
+}
+
+.main-pros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.main-pros-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  gap: 20px;
+
+  color: black;
+}
+
+.main-pros-cards {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(383px + 20px * 2), 1fr));
+
+  gap: 20px;
+}
+
+.main-pros-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.main-pros-cards-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 20px;
+  gap: 20px;
+
+  background-color: #f7f7f7;
+
+  width: 100%;
+  max-width: calc(383px + 20px * 2);
+}
+
+.main-pros-cards-card img {
+  width: 100%;
+  max-width: 383px;
+}
+
+.main-pros-cards-card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 50%;
+
+  gap: 15px;
+
+  color: black;
+}
+
+@media (min-width: calc(0.03 * 100vw * 2 + 383px * 2 + 20px + 20px * 4)) and (max-width: calc(383px * 3 + 20px * 6 + 20px * 2 + 0.03 * 100vw * 2)) {
+  .main-pros-card-container:nth-child(3) {
+    grid-column: span 2;
+  }
+}

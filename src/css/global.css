@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+
+  /* Default font settings */
+  font-family: "Inter";
+  font-weight: 400;
+  color: white;
+}
+
+.safe-container {
+  width: 100%;
+
+  padding: 0.8% 3%;
+}
+
+.divider {
+  width: 100%;
+
+  border-bottom: 0.5px solid grey;
+}
