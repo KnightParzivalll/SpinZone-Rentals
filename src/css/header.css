@@ -8,39 +8,121 @@
   background-color: white;
   border-bottom: 3px solid black;
 
-  padding: 0.8% 3%;
+  font-family: "Inter";
+  font-weight: 400;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
 
-  gap: 10px;
+  font-size: 20px;
+
+  gap: 1rem;
 }
 
-.header-logo-icon {
+.header-logo img {
   height: 30px;
 }
 
-.header-logo-text {
-  font-family: "Inter";
-  font-size: 20px;
-  font-weight: 400;
-
-  line-height: 0;
+#nav-toggle {
+  display: none;
 }
 
-.header-menu {
+.nav-icon-container {
+  display: none;
+
+  cursor: pointer;
+
+  width: 30px;
+  height: 30px;
+}
+
+.nav-icon-container img {
+  width: 100%;
+  height: 100%;
+
+  animation-name: opacity-change;
+  animation-duration: 0.8s;
+}
+
+.nav-icon-close {
+  display: none;
+}
+
+.nav {
   display: flex;
-  align-items: center;
+  flex-direction: row;
 
-  gap: 16px;
+  font-size: 14px;
+
+  gap: 1rem;
+
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
 }
 
-.header-menu-text {
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
+.nav > li {
+  overflow: hidden;
+}
 
-  line-height: 0;
+@media (max-width: 900px) {
+  .nav-icon-container {
+    display: block;
+  }
+
+  #nav-toggle:checked + .nav-icon-container .nav-icon-menu {
+    display: none;
+  }
+
+  #nav-toggle:checked + .nav-icon-container .nav-icon-close {
+    display: block;
+  }
+
+  .nav {
+    width: 100%;
+
+    position: absolute;
+    top: calc(30px + 2 * 0.8vw);
+    left: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+  }
+
+  #nav-toggle ~ .nav li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #nav-toggle:checked ~ .nav li {
+    border: 2px solid darkgray;
+
+    height: 2.5em;
+    padding: 0.5em;
+
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .nav > li {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0.5em 0;
+
+    color: black;
+    background-color: white;
+  }
 }

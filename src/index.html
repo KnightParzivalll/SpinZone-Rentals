@@ -9,22 +9,30 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/animations.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-logo">
-        <img src="svg/header-logo.svg" alt="" class="header-logo-icon" />
-        <p class="header-logo-text">SpinZone Rentals</p>
-      </div>
-      <div class="header-menu">
-        <p class="header-menu-text">Главная</p>
-        <p class="header-menu-text">Товары напрокат</p>
-        <p class="header-menu-text">FAQ</p>
-        <p class="header-menu-text">Новости</p>
-        <p class="header-menu-text">Контакты</p>
-        <p class="header-menu-text">О нас</p>
-        <p class="header-menu-text">Онлайн запись</p>
-      </div>
+    <header class="safe-container header">
+      <section class="header-logo">
+        <img src="svg/header-logo.svg" alt="" />
+        <p>SpinZone Rentals</p>
+      </section>
+
+      <section>
+        <input id="nav-toggle" type="checkbox" />
+        <label class="nav-icon-container" for="nav-toggle">
+          <img class="nav-icon-menu" src="svg/nav-open.svg" alt="" />
+          <img class="nav-icon-close" src="svg/nav-close.svg" alt="" />
+        </label>
+        <ul class="nav">
+          <li>Главная</li>
+          <li>Товары напрокат</li>
+          <li>Новости</li>
+          <li>Контакты</li>
+          <li>О нас</li>
+          <li>Онлайн запись</li>
+        </ul>
+      </section>
     </header>
 
     <main class="main-wrapper">
