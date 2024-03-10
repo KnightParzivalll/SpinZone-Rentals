@@ -68,6 +68,17 @@
   overflow: hidden;
 }
 
+.nav > li a {
+  color: black;
+
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav > li a:hover {
+  color: dimgray;
+}
+
 @media (max-width: 900px) {
   .nav-icon-container {
     display: block;
