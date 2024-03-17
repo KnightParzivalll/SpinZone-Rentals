@@ -9,11 +9,10 @@
       (1920 - 480)
   );
 
-  --card-width-restricted: calc(
-    max(
-      var(--card-width-min) * 1px,
-      min(var(--card-width), var(--card-width-max) * 1px)
-    )
+  --card-width-restricted: clamp(
+    var(--card-width-min) * 1px,
+    var(--card-width),
+    var(--card-width-max) * 1px
   );
 }
 
@@ -26,8 +25,10 @@
       (100vw - 480px) / (1920 - 480)
   );
 
-  font-size: calc(
-    max(var(--text-min) * 1px, min(var(--text-size), var(--text-max) * 1px))
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
   );
 }
 
@@ -40,8 +41,10 @@
       (100vw - 480px) / (1920 - 480)
   );
 
-  font-size: calc(
-    max(var(--text-min) * 1px, min(var(--text-size), var(--text-max) * 1px))
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
   );
 }
 
@@ -54,8 +57,10 @@
       (100vw - 480px) / (1920 - 480)
   );
 
-  font-size: calc(
-    max(var(--text-min) * 1px, min(var(--text-size), var(--text-max) * 1px))
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
   );
 }
 /* End adaptivity */
