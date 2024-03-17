@@ -1,3 +1,144 @@
+/* Adaptivity */
+.main-welcome-image {
+  --image-min: 300;
+  --image-max: 500;
+
+  --image-size: calc(
+    var(--image-min) * 1px + (var(--image-max) - var(--image-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  height: clamp(
+    var(--image-min) * 1px,
+    var(--image-size),
+    var(--image-max) * 1px
+  );
+}
+
+.main-welcome-text {
+  --text-min: 32;
+  --text-max: 48;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+
+.main-visit-appointment p {
+  --text-min: 14;
+  --text-max: 17;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+
+  --width-min: 30;
+  --width-max: 90;
+
+  --width: calc(
+    var(--width-min) * 1% + (var(--width-max) - var(--width-min)) / (100% - 0px) *
+      (1920 - 480)
+  );
+
+  width: clamp(var(--width-min) * 1%, var(--width), var(--width-max) * 1%);
+}
+
+.main-pros {
+  --card-width-min: 300;
+  --card-width-max: 383;
+
+  --card-width: calc(
+    var(--card-width-min) * 1px +
+      (var(--card-width-max) - var(--card-width-min)) * (100vw - 480px) /
+      (1920 - 480)
+  );
+
+  --card-width-restricted: clamp(
+    var(--card-width-min) * 1px,
+    var(--card-width),
+    var(--card-width-max) * 1px
+  );
+}
+
+.main-pros-title {
+  --text-min: 20;
+  --text-max: 48;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+
+.main-pros-title .lower-text {
+  --text-min: 11;
+  --text-max: 16;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+
+.main-pros-card {
+  --text-min: 16;
+  --text-max: 20;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+
+.feedback-form p {
+  --text-min: 18;
+  --text-max: 30;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+/* End adaptivity */
+
 .main-welcome-image {
   display: flex;
   justify-content: center;
@@ -9,57 +150,30 @@
 }
 
 .main-welcome-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+  text-align: center;
 
   color: white;
 }
 
-@media (min-width: 0px) and (max-width: 1920px) {
-  .main-welcome-image {
-    height: calc(300px + (500 - 300) * (100vw - 480px) / (1920 - 480));
-  }
+.main-welcome-text .lower-text {
+  font-size: 0.4em;
 
-  .main-welcome-text-upper {
-    font-size: calc(32px + (48 - 32) * (100vw - 480px) / (1920 - 480));
-  }
+  padding-top: 6px;
+}
 
-  .main-welcome-text-lower {
-    font-size: calc(12px + (16 - 12) * (100vw - 480px) / (1920 - 480));
-  }
+.main-visit-appointment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .divider {
-    margin: calc(6px + (16 - 6) * (100vw - 480px) / (1920 - 480)) 0;
-  }
+  text-align: center;
 
-  .main-pros-text-upper {
-    font-size: calc(24px + (48 - 24) * (100vw - 480px) / (1920 - 480));
-  }
+  color: black;
 
-  .main-pros-text-lower {
-    font-size: calc(11px + (16 - 11) * (100vw - 480px) / (1920 - 480));
-  }
+  padding-top: 5% !important;
+  padding-bottom: 5% !important;
 
-  .main-pros-cards-card-text-upper {
-    font-size: calc(16px + (20 - 16) * (100vw - 480px) / (1920 - 480));
-  }
-
-  .main-pros-cards-card-text-lower {
-    font-size: calc(11px + (14 - 11) * (100vw - 480px) / (1920 - 480));
-  }
-
-  .main-visit-appointment-text {
-    width: calc(20% + (90 - 30) / (100% - 0px) * (1920 - 480));
-
-    font-size: calc(16px + (20 - 16) * (100vw - 480px) / (1920 - 480));
-  }
-
-  .main-pros {
-    --card-width: calc(320px + (383 - 320) * (100vw - 480px) / (1920 - 480));
-  }
+  border: 0.5px solid grey;
 }
 
 .main-pros {
@@ -71,16 +185,15 @@
   gap: 30px;
 }
 
-.main-pros-text {
+.main-pros-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
 
   text-align: center;
 
-  gap: 20px;
+  gap: 0.5em;
 
   color: black;
 }
@@ -88,10 +201,15 @@
 .main-pros-cards {
   width: 100%;
 
+  --card-padding: 20px;
+  --card-width-padding: calc(
+    var(--card-width-restricted) + var(--card-padding) * 2
+  );
+
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(calc(var(--card-width) + 20px * 2), 1fr)
+    minmax(var(--card-width-padding), 1fr)
   );
 
   gap: 20px;
@@ -103,83 +221,62 @@
   align-items: stretch;
 }
 
-.main-pros-cards-card {
+.main-pros-card {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   text-align: center;
 
-  padding: 20px;
+  padding: var(--card-padding);
   gap: 20px;
 
   background-color: #f7f7f7;
 
-  width: 100%;
-  max-width: calc(var(--card-width) + 20px * 2);
+  width: var(--card-width-padding);
 }
 
-.main-pros-cards-card img {
+.main-pros-card img {
   width: 100%;
-  max-width: var(--card-width);
 }
 
-.main-pros-cards-card-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+.main-pros-card-text-title,
+.main-pros-card-text {
   width: 50%;
-
-  gap: 15px;
 
   color: black;
 }
 
-@media (min-width: calc(0.03 * 100vw * 2 + (320px + (383 - 320) * (100vw - 480px) / (1920 - 480)) * 2 + 20px + 20px * 4)) and (max-width: calc((320px + (383 - 320) * (100vw - 480px) / (1920 - 480)) * 3 + 20px * 6 + 20px * 2 + 0.03 * 100vw * 2)) {
+.main-pros-card-text {
+  font-size: 0.7em;
+}
+
+@media (min-width: calc(0.03 * 100vw * 2 + clamp(300px, (300px + (383 - 300) * (100vw - 480px) / (1920 - 480)), 383px) * 2 + 20px + 20px * 4)) and (max-width: calc(0.03 * 100vw * 2 + clamp(300px, (300px + (383 - 300) * (100vw - 480px) / (1920 - 480)), 383px) * 3 + 20px * 6 + 20px * 2)) {
   .main-pros-card-container:nth-child(3) {
     grid-column: span 2;
   }
 }
 
-.main-visit-appointment {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 5% 0;
-
-  border: 0.5px solid grey;
-}
-
-.main-visit-appointment-text {
-  text-align: center;
-
-  color: black;
-}
-
-.feedback-form-inner-container {
-  padding: 2% 0 4% 0;
-
+.feedback-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-}
 
-.feedback-form {
+  gap: 30px;
+
   background-color: black;
 }
 
-.feedback-form-text {
-  color: white;
-  font-size: 30px;
+.feedback-form p {
   text-align: center;
+
+  padding-top: 2%;
+
+  color: white;
 }
 
-.feedback-form-form {
+.feedback-form .form {
   width: 60%;
 
   display: flex;
@@ -188,9 +285,11 @@
   justify-content: center;
 
   gap: 20px;
+
+  padding-bottom: 3%;
 }
 
-.feedback-form-form-group {
+.form .form-group {
   width: 100%;
 
   display: flex;
@@ -201,7 +300,7 @@
   gap: 10px;
 }
 
-.feedback-form-form-group input,
+.form .form-group input,
 textarea {
   width: 100%;
 
@@ -218,7 +317,7 @@ textarea {
   padding: 6px;
 }
 
-.feedback-form-form-group textarea {
+.form .form-group textarea {
   min-width: 100%;
   max-width: 100%;
 
@@ -228,7 +327,7 @@ textarea {
   max-height: 65px;
 }
 
-.feedback-form-form button {
+.feedback-form .form button {
   width: 100%;
   height: 50px;
 

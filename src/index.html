@@ -42,78 +42,57 @@
     <main class="main-wrapper">
       <section class="main-welcome-image">
         <div class="main-welcome-text">
-          <div class="main-welcome-text-upper">
-            <p>«SPINZONE RENTALS»</p>
-            <p>К ВАШИМ УСЛУГАМ</p>
-          </div>
-          <div class="main-welcome-text-lower">
-            <p>Прокат роликов и велосипедов</p>
-          </div>
+          <p>«SPINZONE RENTALS»</p>
+          <p>К ВАШИМ УСЛУГАМ</p>
+          <p class="lower-text">Прокат роликов и велосипедов</p>
         </div>
       </section>
-
-      <!-- <section class="divider"></section> -->
 
       <section class="safe-container">
         <div class="main-visit-appointment">
-          <div class="main-visit-appointment-text">
-            <p>Еще нет услуг для записи. Пожалуйста, зайдите позже.</p>
-          </div>
+          <p>Еще нет услуг для записи. Пожалуйста, зайдите позже.</p>
         </div>
       </section>
 
-      <!-- <section class="divider"></section> -->
-
       <section class="safe-container main-pros">
-        <div class="main-pros-text">
-          <div class="main-pros-text-upper">
-            <p>ПОЧЕМУ СТОИТ АРЕНДОВАТЬ У НАС?</p>
-          </div>
-
-          <div class="main-pros-text-lower">
-            <p>Почувствуйте разницу</p>
-          </div>
+        <div class="main-pros-title">
+          <p>ПОЧЕМУ СТОИТ АРЕНДОВАТЬ У НАС?</p>
+          <p class="lower-text">Почувствуйте разницу</p>
         </div>
 
         <div class="main-pros-cards">
           <div class="main-pros-card-container">
-            <div class="main-pros-cards-card">
+            <div class="main-pros-card">
               <img src="public/images/men.webp" alt="" />
-              <div class="main-pros-cards-card-text">
-                <div class="main-pros-cards-card-text-upper">
-                  <p>ГЛУБОКОЕ ЗНАНИЕ РЫНКА</p>
-                </div>
-                <div class="main-pros-cards-card-text-lower">
-                  <p>Вам не придется ни о чем беспокоиться</p>
-                </div>
+              <div class="main-pros-card-text-title">
+                <p>ГЛУБОКОЕ ЗНАНИЕ РЫНКА</p>
+              </div>
+              <div class="main-pros-card-text">
+                <p>Вам не придется ни о чем беспокоиться</p>
               </div>
             </div>
           </div>
 
           <div class="main-pros-card-container">
-            <div class="main-pros-cards-card">
+            <div class="main-pros-card">
               <img src="public/images/outside.webp" alt="" />
-              <div class="main-pros-cards-card-text">
-                <div class="main-pros-cards-card-text-upper">
-                  <p>ЭКОУСТОЙЧИВЫЕ РЕШЕНИЯ</p>
-                </div>
-                <div class="main-pros-cards-card-text-lower">
-                  <p>Всегда на связи</p>
-                </div>
+              <div class="main-pros-card-text-title">
+                <p>ЭКОУСТОЙЧИВЫЕ РЕШЕНИЯ</p>
+              </div>
+              <div class="main-pros-card-text">
+                <p>Всегда на связи</p>
               </div>
             </div>
           </div>
 
           <div class="main-pros-card-container">
-            <div class="main-pros-cards-card">
+            <div class="main-pros-card">
               <img src="public/images/gears.webp" alt="" />
-              <div class="main-pros-cards-card-text">
-                <div class="main-pros-cards-card-text-upper">
-                  <p>БЕСПЛАТНЫЕ КОНСУЛЬТАЦИИ</p>
-                </div>
-                <div class="main-pros-cards-card-text-lower">
-                  <p>Настоящие профи</p>
-                </div>
+              <div class="main-pros-card-text-title">
+                <p>БЕСПЛАТНЫЕ КОНСУЛЬТАЦИИ</p>
+              </div>
+              <div class="main-pros-card-text">
+                <p>Настоящие профи</p>
               </div>
             </div>
           </div>
@@ -121,43 +100,39 @@
       </section>
 
       <section class="safe-container feedback-form">
-        <div class="feedback-form-inner-container">
-          <div class="feedback-form-text">
-            <p>СВЯЖИТЕСЬ С НАМИ</p>
+        <p>СВЯЖИТЕСЬ С НАМИ</p>
+        <form class="form" action="">
+          <div class="form-group">
+            <label for="first-name">Имя *</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="Сюда вписать ваше имя..."
+              required
+            />
           </div>
-          <form class="feedback-form-form" action="">
-            <div class="feedback-form-form-group">
-              <label for="first-name">Имя *</label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                placeholder="Сюда вписать ваше имя..."
-                required
-              />
-            </div>
-            <div class="feedback-form-form-group">
-              <label for="last-name">Фамилия *</label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                placeholder="Сюда вписать вашу фамилию..."
-                required
-              />
-            </div>
-            <div class="feedback-form-form-group">
-              <label for="message">Текст *</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Здесь мы можете поделиться своим мнением или критикой..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn">Отправить</button>
-          </form>
-        </div>
+          <div class="form-group">
+            <label for="last-name">Фамилия *</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Сюда вписать вашу фамилию..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Текст *</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Здесь мы можете поделиться своим мнением или критикой..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
       </section>
     </main>
 
