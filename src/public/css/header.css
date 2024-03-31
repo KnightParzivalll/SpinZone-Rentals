@@ -150,7 +150,7 @@
   }
 
   .nav {
-    display: none;
+    display: none !important;
 
     width: 100%;
 
@@ -172,7 +172,7 @@
   }
 
   #nav-toggle:checked ~ .nav {
-    display: flex;
+    display: flex !important;
 
     border-top: 3px solid dimgrey;
     border-bottom: 2px dotted dimgrey;

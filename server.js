@@ -16,6 +16,10 @@ app.get("/rent.html", function (req, res) {
   res.sendFile(path.join(__dirname, "/src/rent.html"));
 });
 
+app.get("/contacts.html", function (req, res) {
+  res.sendFile(path.join(__dirname, "/src/contacts.html"));
+});
+
 app.use('/public', express.static('src/public'))
 
 app.listen(port);

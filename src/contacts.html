@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Прокат товаров | SpinZone Rentals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="public/css/normalize.css" />
+    <link rel="stylesheet" href="public/css/header.css" />
+    <link rel="stylesheet" href="public/css/global.css" />
+    <link rel="stylesheet" href="public/css/footer.css" />
+    <link rel="stylesheet" href="public/css/animations.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header class="safe-container header">
+      <section class="header-logo">
+        <img src="public/svg/header-logo.svg" alt="" />
+        <p>SpinZone Rentals</p>
+      </section>
+
+      <section>
+        <input id="nav-toggle" type="checkbox" />
+        <label class="nav-icon-container" for="nav-toggle">
+          <img class="nav-icon-menu" src="public/svg/nav-open.svg" alt="" />
+          <img class="nav-icon-close" src="public/svg/nav-close.svg" alt="" />
+        </label>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="rent.html">Прокат</a>
+          </li>
+          <li><a href="#">Новости</a></li>
+          <li class="nav-selected"><a href="contacts.html">Контакты</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Онлайн запись</a></li>
+        </ul>
+      </section>
+    </header>
+
+    <main class="main-wrapper safe-container">
+      <div class="container px-4 py-5 text-dark" id="featured-3">
+        <h2 class="pb-2 border-bottom">Наши контакты</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-5"
+            >
+              <i class="bi bi-telegram"></i>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Telegram</h3>
+            <p>
+              Вы можете написать нам в телеграмм и мы решим любую вашу проблему
+              или ответим на любой ваш вопрос.
+            </p>
+            <a href="#" class="icon-link" style="line-height: 0">
+              Написать нам
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-5"
+            >
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Звонок</h3>
+            <p>
+              Вы можете позвонить нам, чтобы получить ответ на свой вопрос
+              быстрее.
+            </p>
+            <a href="#" class="icon-link" style="line-height: 0">
+              Позвонить нам
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+          <div class="feature col">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-5"
+            >
+              <i class="bi bi-envelope-at-fill"></i>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Обратная связь</h3>
+            <p>
+              Также ваш вопрос можно задать в форме обратной связи на главной
+              странице.
+            </p>
+            <a href="#" class="icon-link" style="line-height: 0">
+              Написать нам
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="safe-container" style="position: absolute; bottom: 10px">
+      <div class="footer">
+        <p>&copy; SpinZone Rentals, 2024. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
