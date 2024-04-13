@@ -1,0 +1,121 @@
+/* Adaptivity */
+.feedback-text {
+  --text-min: 24;
+  --text-max: 48;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+
+.feedback-cards {
+  --card-width-min: 300;
+  --card-width-max: 383;
+
+  --card-width: calc(
+    var(--card-width-min) * 1px +
+      (var(--card-width-max) - var(--card-width-min)) * (100vw - 480px) /
+      (1920 - 480)
+  );
+
+  --card-width-restricted: clamp(
+    var(--card-width-min) * 1px,
+    var(--card-width),
+    var(--card-width-max) * 1px
+  );
+}
+
+.feedback-card-text {
+  --text-min: 16;
+  --text-max: 20;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+
+.feedback-card-author {
+  --text-min: 11;
+  --text-max: 14;
+
+  --text-size: calc(
+    var(--text-min) * 1px + (var(--text-max) - var(--text-min)) *
+      (100vw - 480px) / (1920 - 480)
+  );
+
+  font-size: clamp(
+    var(--text-min) * 1px,
+    var(--text-size),
+    var(--text-max) * 1px
+  );
+}
+/* End adaptivity */
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  color: black;
+  text-align: center;
+}
+
+.feedback-text {
+  padding-top: 0.5em;
+}
+
+.feedback-cards {
+  width: 100%;
+
+  --card-padding: 20px;
+  --card-width-padding: calc(
+    var(--card-width-restricted) + var(--card-padding) * 2
+  );
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--card-width-padding), 1fr)
+  );
+
+  gap: 20px;
+}
+
+.feedback-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--card-padding);
+  gap: 20px;
+
+  width: var(--card-width-padding);
+}
+
+.feedback-card img {
+  width: 100px;
+
+  border-radius: 50%;
+}

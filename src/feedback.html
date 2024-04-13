@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="public/css/normalize.css" />
+    <link rel="stylesheet" href="public/css/header.css" />
+    <link rel="stylesheet" href="public/css/global.css" />
+    <link rel="stylesheet" href="public/css/footer.css" />
+    <link rel="stylesheet" href="public/css/animations.css" />
+    <link rel="stylesheet" href="public/css/feedback/feedback.css" />
+  </head>
+  <body>
+    <header class="safe-container header">
+      <section class="header-logo">
+        <img src="public/svg/header-logo.svg" alt="" />
+        <p>SpinZone Rentals</p>
+      </section>
+
+      <section>
+        <input id="nav-toggle" type="checkbox" />
+        <label class="nav-icon-container" for="nav-toggle">
+          <img class="nav-icon-menu" src="public/svg/nav-open.svg" alt="" />
+          <img class="nav-icon-close" src="public/svg/nav-close.svg" alt="" />
+        </label>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="rent.html">Прокат</a>
+          </li>
+          <li class="nav-selected"><a href="feedback.html">Отзывы</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Онлайн запись</a></li>
+        </ul>
+      </section>
+    </header>
+
+    <main class="main-wrapper safe-container feedback">
+      <div class="feedback-text">
+        <p>Наши отзывы</p>
+      </div>
+
+      <div class="feedback-cards"></div>
+    </main>
+
+    <footer class="safe-container">
+      <div class="footer">
+        <p>&copy; SpinZone Rentals, 2024. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="public/js/FeedbackPage.js"></script>
+  </body>
+</html>
