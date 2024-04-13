@@ -20,7 +20,11 @@ app.get("/contacts.html", function (req, res) {
   res.sendFile(path.join(__dirname, "/src/contacts.html"));
 });
 
-app.use('/public', express.static('src/public'))
+app.get("/feedback.html", function (req, res) {
+  res.sendFile(path.join(__dirname, "/src/feedback.html"));
+});
+
+app.use("/public", express.static("src/public"));
 
 app.listen(port);
 console.log("Server started at http://localhost:" + port);
